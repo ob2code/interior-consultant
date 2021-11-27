@@ -1,0 +1,268 @@
+@import 'helpers/variables', 'helpers/reset';
+
+%nav--active{  
+    border-bottom: 2px solid white;
+}
+
+@mixin responsive--image ($max-width, $object-fit: contain){
+    width: 100%;
+    max-width: $max-width;
+    height: auto;
+    object-fit: $object-fit;
+  }
+
+body {
+    font-family: $font;
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $space-lg;
+  }
+
+.page-wapper{
+
+    // Centered block elment
+    margin: $space-lg auto;
+    
+    max-width: 1440px;
+    padding: $space-lg;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $space-lg*2;
+
+    .nav--open{
+        background-color: $bg-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 998;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .nav__item{
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+        margin: $space-md;
+        color: $text-color;
+        position: relative;
+        cursor: pointer;
+        padding-bottom: $space-xs;
+        
+        &:hover{       
+            @extend %nav--active;
+        }
+
+        &--active{
+            @extend %nav--active;
+            font-weight: bold;
+            }
+    }
+
+    .brand{
+        font-size: 14px;        
+        font-family: 'Crimson Pro', serif;
+        border: 1px solid white;
+        padding: $space-xs;
+    }
+
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__content {
+    max-width: 400px;
+    width: auto;
+    margin-right: 87px;
+    h1{
+        font-family: 'Lora', serif;
+        font-size: $text-md*3;
+        line-height: 61px;
+        font-weight: normal;
+        margin-bottom: $space-lg;
+    }
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: $text-lg;
+        margin-bottom: $space-lg;
+    }
+
+    a {
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+        color: $text-color;
+        font-weight: bold;
+    }
+
+    i {
+        padding-left: $space-xs;
+    }
+}
+
+.card__img{
+    .photo{
+        @include responsive--image(1400px);
+    }
+    //background-color: blanchedalmond;
+}
+
+.tagbox{
+    top: -50px;
+    float: right;
+    position: relative;
+    
+    background: #181719;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    //width: 70%;
+    max-width: 410px;    
+    padding: $space-md;
+    margin-right: $space-md;
+}
+
+.tagbox__namecard{
+    display: flex;
+    align-items: center;
+
+    .namecard__img{
+        @include responsive--image(72px);
+        border-radius: 50%;
+    }
+    .namecard__content{
+        padding-left: $space-md;
+
+        h5{
+            margin-bottom: $space-sm;
+        }
+        span{
+            color: #828282;
+            font-size: 12px;
+        }
+    }
+}
+.tagbox__credit{
+    margin-top: $space-md;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    font-size: $text-md;
+
+}
+/* HAMBURGER BUTTON */
+
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+
+    position: relative;
+    z-index: 10;
+}
+
+.hamburger-button__bar {
+    height: 3px;
+    width: 22px;
+    background-color: white;
+    margin-top: 4px;
+    border-radius: 2px;
+
+    transform-origin: 21px;
+}
+
+.hamburger-button__bar:nth-child(1) {
+    margin-top: 0;
+}
+
+.hamburger-button--open .hamburger-button__bar:nth-child(1) {
+    transform: rotate(-45deg);
+}
+
+.hamburger-button--open .hamburger-button__bar:nth-child(2) {
+    opacity: 0;
+} 
+
+.hamburger-button--open .hamburger-button__bar:nth-child(3) {
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 767px) {
+    body{
+        padding: $space-md $space-sm;
+    }
+
+    .header{
+        margin-bottom: $space-lg;
+    }
+
+    .nav{
+        display: none;  
+    }
+    
+    .hamburger-button {
+        display: initial;
+        z-index: 999;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+    .card__content {
+        max-width: 400px;
+        width: auto;
+        margin-right: initial;
+        margin-bottom: $space-lg;
+        h1{
+            font-size: $text-md*2;
+            margin-bottom: $space-md;
+        }
+        p {
+            font-size: $text-md;
+            margin-bottom: $space-md;
+            padding-right: $space-lg*4;
+        }
+    }
+
+    .tagbox__credit{
+        margin-top: $space-sm;
+        font-size: $text-md;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .card__content {
+        p {
+            padding: 0;
+        }    
+    }
+}
+
+.attribution {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    color: #A9A9A9;
+    a {
+        text-decoration: none;
+        color: #A9A9A9;
+        font-weight: bold;
+      }
+  }
+
+

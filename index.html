@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+
+  <link rel="icon" href="images/devchallenges.png" />
+  <script src="https://kit.fontawesome.com/0c867811bd.js" crossorigin="anonymous"></script>
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora&family=Montserrat:wght@100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Interior Consultant</title>
+
+</head>
+
+<body>
+
+  <div class="page-wapper">
+
+    <div class="header">
+      <h1 class="brand">THIS INTERIOR</h1>
+      <nav class="nav" id="nav">
+        <a class="nav__item nav__item--active" href="#">Home</a>
+        <a class="nav__item" href="#">Collection</a>
+        <a class="nav__item" href="#">About</a>
+        <a class="nav__item" href="#">Contact</a>
+      </nav>
+      <button aria-label="Name" class="hamburger-button" id="hamburger-button" onclick="toggleNavigation()">
+        <div class="hamburger-button__bar"></div>
+        <div class="hamburger-button__bar"></div>
+        <div class="hamburger-button__bar"></div>
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="card__content">
+        <h1>Modern Interior</h1>
+        <p>A full-Service residential & commercial interior design and staging company offering professional organizing
+          &
+          eco-services.</p>
+        <span><a href="#">Read more <i class="fas fa-arrow-right"></i></a></span>
+      </div>
+      <div class="card__img">
+        <img class="photo" src="images/photo1.png" alt="largeimg">
+        <div class="tagbox">
+          <div class="tagbox__namecard">
+            <img class="namecard__img" src="images/photo2.png" alt="designer image">
+            <div class="namecard__content">
+              <h5>Aliza Webber</h5>
+              <span>Interior designer</span>
+            </div>
+          </div>
+          <p class="tagbox__credit">Designed in 2020 by<br>Aliza Webber</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">created by <a href="https://twitter.com/ob2code">ob2code</a> - devChallenges.io</div>
+  </div>
+  <script>
+    const toggle = (elementId) => {
+      const element = document.getElementById(elementId);
+
+      if (element.classList.contains(elementId + "--open")) {
+        element.classList.remove(elementId + "--open")
+      } else {
+        element.classList.add(elementId + "--open")
+      }
+    }
+
+    const toggleNavigation = () => {
+      toggle("nav");
+      toggle("hamburger-button");
+    }
+  </script>
+</body>
+
+</html>
