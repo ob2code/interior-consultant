@@ -37,10 +37,13 @@ body {
 
     .nav--open{
         background-color: $bg-color;
+
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center;        
         align-items: center;
+        row-gap: $space-md;
+        
         position: absolute;
         z-index: 998;
         top: 0;
@@ -52,7 +55,7 @@ body {
     .nav__item{
         font-family: 'Montserrat', sans-serif;
         text-decoration: none;
-        margin: $space-md;
+        margin-left: $space-lg;
         color: $text-color;
         position: relative;
         cursor: pointer;
@@ -65,7 +68,7 @@ body {
         &--active{
             @extend %nav--active;
             font-weight: bold;
-            }
+        }
     }
 
     .brand{
@@ -87,6 +90,7 @@ body {
     max-width: 400px;
     width: auto;
     margin-right: 87px;
+    font-family: 'Montserrat', sans-serif;
     h1{
         font-family: 'Lora', serif;
         font-size: $text-md*3;
@@ -96,13 +100,11 @@ body {
     }
 
     p {
-        font-family: 'Montserrat', sans-serif;
         font-size: $text-lg;
         margin-bottom: $space-lg;
     }
 
     a {
-        font-family: 'Montserrat', sans-serif;
         text-decoration: none;
         color: $text-color;
         font-weight: bold;
@@ -117,49 +119,55 @@ body {
     .photo{
         @include responsive--image(1400px);
     }
+
 }
 
 .tagbox{
-    top: -$space-md*3;
+    
     float: right;
     position: relative;
-    
-    background: #181719;
-   
+    top: -$space-md*3;
+    background: $bg-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 70%;
-    max-width: 410px;    
+    max-width: 410px; 
     padding: $space-md;
     margin-right: $space-md;
-}
 
-.tagbox__namecard{
-    display: flex;
-    align-items: center;
-
-    .namecard__img{
-        @include responsive--image(72px);
-        border-radius: 50%;
-    }
-    .namecard__content{
-        padding-left: $space-md;
-
-        h5{
-            margin-bottom: $space-sm;
+    .tagbox__namecard{
+        display: flex;
+        align-items: center;
+    
+        .namecard__img{
+            @include responsive--image(72px);
+            border-radius: 50%;
         }
-        span{
-            color: #828282;
-            font-size: $text-md;
+        .namecard__content{
+            margin-left: $space-md;
+    
+            h5{
+                font-size: $text-lg;
+                margin-bottom: $space-sm;
+            }
+            span{
+                color: #828282;
+                font-size: $text-md;
+            }
         }
     }
-}
-.tagbox__credit{
-    margin-top: $space-md;
-    font-family: 'Lora', serif;
-    font-weight: bold;
-    font-size: $text-md;
+    
 
+    .tagbox__credit{
+        margin-top: $space-md;
+        font-family: 'Lora', serif;
+        font-weight: bold;
+        font-size: $text-md;
+    
+    }
 }
+
+
+
 /* HAMBURGER BUTTON */
 
 .hamburger-button {
@@ -231,39 +239,32 @@ body {
     }
 
     .tagbox{
-        top: -50px;
-        
-        max-width: 310px;    
+        top: -$space-md*2;
+        max-width: 310px;
         padding: $space-sm;
         margin-right: $space-xs;
-    }
 
-    .tagbox__namecard{
-
-        .namecard__img{
-            @include responsive--image(42px);
-        }
-        .namecard__content{
-            padding-left: $space-md;
-    
-            h5{
-                margin-bottom: $space-xs;
+        .tagbox__namecard{
+            .namecard__img{
+                @include responsive--image(42px);
             }
-            span{
-                color: #828282;
-                font-size: $text-xs;
+            .namecard__content{      
+                h5{
+                    font-size: $text-md;
+                    margin-bottom: $space-xs;
+                }
+                span{
+                    color: #828282;
+                    font-size: $text-xs;
+                }
             }
         }
+        .tagbox__credit{
+            margin-top: $space-sm;
+            font-size: $text-xs;
+        }
+
     }
-
-
-
-
-    .tagbox__credit{
-        margin-top: $space-sm;
-        font-size: $text-xs;
-    }
-
 
 }
 
@@ -284,12 +285,12 @@ body {
     right: 0;
 
     text-align: center;
-    color: #A9A9A9;
+    //color: #A9A9A9;
     a {
         text-decoration: none;
         color: #A9A9A9;
         font-weight: bold;
-      }
-  }
+    }
+}
 
 

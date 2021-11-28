@@ -7,16 +7,15 @@
   maximum-scale=5" />
 
   <link rel="icon" href="images/devchallenges.png" />
-  <script src="https://kit.fontawesome.com/0c867811bd.js" crossorigin="anonymous"></script>
-
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora&family=Montserrat:wght@100&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
+  <script src="js/scripts.js"></script>
   <title>Interior Consultant</title>
 
 </head>
@@ -46,7 +45,8 @@
         <p>A full-Service residential & commercial interior design and staging company offering professional organizing
           &
           eco-services.</p>
-        <span><a href="#">Read more <i class="fas fa-arrow-right"></i></a></span>
+        <span><a href="#">Read more <span class="material-icons"
+              style="vertical-align: middle;">&#xe8e4;</span></a></span>
       </div>
       <div class="card__img">
         <img class="photo" src="images/photo1.png" alt="largeimg">
@@ -65,22 +65,7 @@
 
     <div class="attribution">created by <a href="https://twitter.com/ob2code">ob2code</a> - devChallenges.io</div>
   </div>
-  <script>
-    const toggle = (elementId) => {
-      const element = document.getElementById(elementId);
 
-      if (element.classList.contains(elementId + "--open")) {
-        element.classList.remove(elementId + "--open")
-      } else {
-        element.classList.add(elementId + "--open")
-      }
-    }
-
-    const toggleNavigation = () => {
-      toggle("nav");
-      toggle("hamburger-button");
-    }
-  </script>
 </body>
 
 </html>

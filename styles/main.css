@@ -116,6 +116,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 1rem;
   position: absolute;
   z-index: 998;
   top: 0;
@@ -126,7 +127,7 @@ body {
 .header .nav__item {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  margin: 1rem;
+  margin-left: 2rem;
   color: #FFFFFF;
   position: relative;
   cursor: pointer;
@@ -152,6 +153,7 @@ body {
   max-width: 400px;
   width: auto;
   margin-right: 87px;
+  font-family: "Montserrat", sans-serif;
 }
 .card__content h1 {
   font-family: "Lora", serif;
@@ -161,12 +163,10 @@ body {
   margin-bottom: 2rem;
 }
 .card__content p {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 .card__content a {
-  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #FFFFFF;
   font-weight: bold;
@@ -183,9 +183,9 @@ body {
 }
 
 .tagbox {
-  top: -3rem;
   float: right;
   position: relative;
+  top: -3rem;
   background: #181719;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 70%;
@@ -193,30 +193,29 @@ body {
   padding: 1rem;
   margin-right: 1rem;
 }
-
-.tagbox__namecard {
+.tagbox .tagbox__namecard {
   display: flex;
   align-items: center;
 }
-.tagbox__namecard .namecard__img {
+.tagbox .tagbox__namecard .namecard__img {
   width: 100%;
   max-width: 72px;
   height: auto;
   object-fit: contain;
   border-radius: 50%;
 }
-.tagbox__namecard .namecard__content {
-  padding-left: 1rem;
+.tagbox .tagbox__namecard .namecard__content {
+  margin-left: 1rem;
 }
-.tagbox__namecard .namecard__content h5 {
+.tagbox .tagbox__namecard .namecard__content h5 {
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.tagbox__namecard .namecard__content span {
+.tagbox .tagbox__namecard .namecard__content span {
   color: #828282;
   font-size: 1rem;
 }
-
-.tagbox__credit {
+.tagbox .tagbox__credit {
   margin-top: 1rem;
   font-family: "Lora", serif;
   font-weight: bold;
@@ -292,30 +291,26 @@ body {
   }
 
   .tagbox {
-    top: -50px;
+    top: -2rem;
     max-width: 310px;
     padding: 0.5rem;
     margin-right: 0.25rem;
   }
-
-  .tagbox__namecard .namecard__img {
+  .tagbox .tagbox__namecard .namecard__img {
     width: 100%;
     max-width: 42px;
     height: auto;
     object-fit: contain;
   }
-  .tagbox__namecard .namecard__content {
-    padding-left: 1rem;
-  }
-  .tagbox__namecard .namecard__content h5 {
+  .tagbox .tagbox__namecard .namecard__content h5 {
+    font-size: 1rem;
     margin-bottom: 0.25rem;
   }
-  .tagbox__namecard .namecard__content span {
+  .tagbox .tagbox__namecard .namecard__content span {
     color: #828282;
     font-size: 0.75rem;
   }
-
-  .tagbox__credit {
+  .tagbox .tagbox__credit {
     margin-top: 0.5rem;
     font-size: 0.75rem;
   }
@@ -332,7 +327,6 @@ body {
   left: 0;
   right: 0;
   text-align: center;
-  color: #A9A9A9;
 }
 .attribution a {
   text-decoration: none;
