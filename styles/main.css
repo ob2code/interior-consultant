@@ -96,13 +96,12 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #181719;
   color: #FFFFFF;
-  padding: 2rem;
 }
 
 .page-wapper {
-  margin: 2rem auto;
+  margin: 0.5rem auto;
   max-width: 1440px;
-  padding: 2rem;
+  padding: 0.5rem;
 }
 
 .header {
@@ -184,11 +183,12 @@ body {
 }
 
 .tagbox {
-  top: -50px;
+  top: -3rem;
   float: right;
   position: relative;
   background: #181719;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 70%;
   max-width: 410px;
   padding: 1rem;
   margin-right: 1rem;
@@ -213,7 +213,7 @@ body {
 }
 .tagbox__namecard .namecard__content span {
   color: #828282;
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 .tagbox__credit {
@@ -262,10 +262,6 @@ body {
     padding: 1rem 0.5rem;
   }
 
-  .header {
-    margin-bottom: 2rem;
-  }
-
   .nav {
     display: none;
   }
@@ -292,12 +288,36 @@ body {
   .card__content p {
     font-size: 1rem;
     margin-bottom: 1rem;
-    padding-right: 8rem;
+    padding-right: 4rem;
+  }
+
+  .tagbox {
+    top: -50px;
+    max-width: 310px;
+    padding: 0.5rem;
+    margin-right: 0.25rem;
+  }
+
+  .tagbox__namecard .namecard__img {
+    width: 100%;
+    max-width: 42px;
+    height: auto;
+    object-fit: contain;
+  }
+  .tagbox__namecard .namecard__content {
+    padding-left: 1rem;
+  }
+  .tagbox__namecard .namecard__content h5 {
+    margin-bottom: 0.25rem;
+  }
+  .tagbox__namecard .namecard__content span {
+    color: #828282;
+    font-size: 0.75rem;
   }
 
   .tagbox__credit {
     margin-top: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 @media screen and (max-width: 300px) {
