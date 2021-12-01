@@ -2,69 +2,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1,
-  maximum-scale=5" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Consultant</title>
 
-  <link rel="icon" href="images/devchallenges.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora&family=Montserrat:wght@100&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="js/scripts.js"></script>
-  <title>Interior Consultant</title>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Lora:wght@500&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="page-wapper">
 
-    <div class="header">
-      <h1 class="brand">THIS INTERIOR</h1>
-      <nav class="nav" id="nav">
-        <a class="nav__item nav__item--active" href="#">Home</a>
-        <a class="nav__item" href="#">Collection</a>
-        <a class="nav__item" href="#">About</a>
-        <a class="nav__item" href="#">Contact</a>
-      </nav>
-      <button aria-label="Name" class="hamburger-button" id="hamburger-button" onclick="toggleNavigation()">
-        <div class="hamburger-button__bar"></div>
-        <div class="hamburger-button__bar"></div>
-        <div class="hamburger-button__bar"></div>
-      </button>
-    </div>
+    <div id="container">
+        <header>
+            <h1 class="logo">THIS INTERIOR</h1>
+            <nav class="navigation" id="navigation">
+                <a href="" class="navigation__item navigation__item--active">Home</a>
+                <a href="" class="navigation__item">Collection</a>
+                <a href="" class="navigation__item">About</a>
+                <a href="" class="navigation__item">Contact</a>
+            </nav>
 
-    <div class="card">
-      <div class="card__content">
-        <h1>Modern Interior</h1>
-        <p>A full-Service residential & commercial interior design and staging company offering professional organizing
-          &
-          eco-services.</p>
-        <span><a href="#">Read more <span class="material-icons"
-              style="vertical-align: middle;">&#xe8e4;</span></a></span>
-      </div>
-      <div class="card__img">
-        <img class="photo" src="images/photo1.png" alt="largeimg">
-        <div class="tagbox">
-          <div class="tagbox__namecard">
-            <img class="namecard__img" src="images/photo2.png" alt="designer image">
-            <div class="namecard__content">
-              <h5>Aliza Webber</h5>
-              <span>Interior designer</span>
+            <!-- <button class="menu-button" id="menu-button" onclick="toggleNavigation()"><span class="material-icons">&#xe8fe;</span></button> -->
+            <button aria-label="Name" class="hamburger-button" id="hamburger-button" onclick="toggleNavigation()">
+                <div class="hamburger-button__bar"></div>
+                <div class="hamburger-button__bar"></div>
+                <div class="hamburger-button__bar"></div>
+            </button>    
+
+        </header>
+
+        <main>
+            <div class="main__contain">
+                <h1 class="headline">Modern Interior</h1>
+                <p class="description">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+                <a href="#">Read more <span class="material-icons"
+                    >&#xe8e4;</span></a>
             </div>
-          </div>
-          <p class="tagbox__credit">Designed in 2020 by<br>Aliza Webber</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="attribution">created by <a href="https://twitter.com/ob2code">ob2code</a> - devChallenges.io</div>
-  </div>
+            <div class="main__img">
+                <img class="main__photo" src="images/photo1.png" alt="Main Photo">
+                <div class="tagbox">
+                    <div class="tagbox__namecard">
+                        <img src="images/photo2.png" alt="Person Photo">
+                        <div class="tagbox__content">
+                            <h5 class="fullname">Aliza Webber</h5>
+                            <span class="title">Interior designer</span>
+                        </div>
+                        
+                    </div>
+                    <p class="tagbox__credit">Designed in 2020 by<br>Aliza Webber</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="attribution">created by <a href="https://twitter.com/ob2code">ob2code</a> - devChallenges.io</div>
+        </footer>
+    </div>
 
 </body>
 

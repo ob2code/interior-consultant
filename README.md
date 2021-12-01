@@ -47,10 +47,11 @@ Mobile screenshot
 Hello! Have a nice day.
 
 - You can reach my demo website at this <a href="https://ob2code-interior-consultant.netlify.app/">
-      link
-    </a>
+  link
+  </a>
 - This is my first project I apply SASS & Javascript to toggle menu bar.
 - SASS is exciting, I have to change a litte bit thinking to adapt it. Mixin and @extend are wonderful.
+- Updated - 12/1/2021: re-write HTML layout for better structure, remove redundant some SCSS
 
 ### Built With
 
@@ -77,4 +78,3 @@ This application/site was created as a submission to a [DevChallenges](https://d
 - 💻Website [ob2code.netlify.app](https://ob2code.netlify.app/)
 - 👨‍💻GitHub [@ob2code](https://github.com/ob2code)
 - 🐤Twitter [@ob2code](https://twitter.com/ob2code)
-
