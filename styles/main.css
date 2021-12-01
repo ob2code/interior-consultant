@@ -305,9 +305,13 @@ footer {
     z-index: 2;
   }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 2500px) {
   #container {
     height: 50vh;
+  }
+
+  body {
+    background-color: darkslategray;
   }
 }
 
