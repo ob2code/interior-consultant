@@ -1,4 +1,7 @@
-@import "helpers/variables", "helpers/reset";
+@import "helpers/variables", 
+        "helpers/reset", 
+        "helpers/global-media-queries",
+        "helpers/global-mixins";
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -17,8 +20,7 @@ body {
 }
 
 header {
-  display: flex;
-  align-items: center;
+  @include flex;
   justify-content: space-between;
 
   .logo {
@@ -68,14 +70,14 @@ header {
   border: none;
   color: #ffffff;
   display: none;
+
   &:hover {
     cursor: pointer;
   }
 }
 
 main {
-  display: flex;
-  align-items: center;
+  @include flex;
 }
 
 .main__contain {
@@ -207,7 +209,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 767px) {
+@include media-down(medium){
   #container {
     padding: $space-md;
   }
@@ -239,11 +241,16 @@ footer {
   }
 }
 
-@media screen and (min-width: 2500px) {
+@include media-up(huge) {
   #container {
     height: 50vh;
   }
   body {
-    background-color: darkslategray;
+    background-color: #333;
   }
+  
+}
+
+.xxx{
+  @include flex;
 }

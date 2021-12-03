@@ -1,0 +1,75 @@
+@mixin flex-grid($spacing: 1rem, $basis: 50%) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$spacing;
+
+    > * {
+        flex: 1 1 $basis;
+        padding: $spacing;
+    }
+}
+
+@mixin flex {
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex-col {
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+// Transition Mixin
+@mixin transition($properties...) {
+    transition: $properties 0.2s ease-in;
+    -webkit-transition: $properties 0.2s ease-in;
+    -moz-transition: $properties 0.2s ease-in;
+    -ms-transition: $properties 0.2s ease-in;
+    -o-transition: $properties 0.2s ease-in;
+}
+
+  
+  @mixin font-heading {
+    font-family: $font-heading;
+    font-weight: $weight-bold;
+  }
+  
+  @mixin font-met {
+    font-family: $font-main;
+    font-weight: $weight-normal;
+  }
+  
+  @mixin focus-outline {
+    outline: 4px solid $accent-200;
+    outline-offset: 3px;
+  }
+  
+  @mixin page-padding {
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+  
+      @include media-up(small) {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+      }
+  
+      @include media-up(large) {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+      }
+  }
+  
+  @mixin sticky-top {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 10;
+  }
+ 
+  
+  @mixin limit-width { 
+      max-width: 44rem;
+  }
