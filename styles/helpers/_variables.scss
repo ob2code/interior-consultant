@@ -12,3 +12,85 @@ $space-xs: 0.25rem;
 $space-sm: 0.5rem;
 $space-md: 1rem;
 $space-lg: 2rem;
+
+// TYPOGRAPHY VARIABLES
+
+
+// font families
+$font-main: 'Metropolis', system-ui, BlinkMacSystemFont, sans-serif;
+$font-heading: 'Titillium Web', system-ui, sans-serif;
+
+// font weights
+$weight-light: 300;
+$weight-normal: 400;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+// Minor 3rd scale 1.2
+$header1:	2.488rem;
+$header2:   2.074rem;
+$header3:   1.728rem;
+$header4:   1.44rem;
+$header5:   1.2rem;
+$paragraph: 1rem;
+$smallText: 0.875rem;		
+$tinyText:  0.8125rem;		
+$jumbo1:    2.986rem;
+$jumbo2:    3.583rem;
+$jumbo3:    4.3rem;
+$jumbo4:    5.16rem;
+$jumbo5:    5.16rem;
+$jumbo6:    5.16rem;
+
+// Responsive versions 
+$header1-clamp:	clamp($header2, calc(12vw + 1px), $jumbo1);	
+$header2-clamp:	clamp($header3, calc(8vw + 1px), $header1);  
+$header3-clamp:	clamp($header4, calc(6vw + 1px), $header3);  
+$header4-clamp:	clamp($header5, calc(5vw + 1px), $header4);  
+$header5-clamp:	clamp($paragraph, calc(4vw + 1px), $header5);  
+$paragraph-clamp:	clamp($smallText, calc(3vw + 1px), $paragraph);
+$smallText-clamp:	clamp($tinyText, calc(3vw + 1px), $smallText);
+// $tinyText-clamp:	; 
+$jumbo1-clamp:	clamp($header1, calc(10vw + 1px), $jumbo1);   
+$jumbo2-clamp:	clamp($header1, calc(10vw + 1px), $jumbo2);    
+$jumbo3-clamp:	clamp($header1, calc(10vw + 1px), $jumbo3);    
+$jumbo4-clamp:	clamp($jumbo1, calc(10vw + 1px), $jumbo4);    
+// $jumbo5-clamp:	;   
+// $jumbo6-clamp:	;   
+
+
+h1,
+.h1Text {	
+	font-size:	$header1;
+	font-size: 	$header1-clamp;
+}
+h2,
+.h2Text {	
+	font-size:	$header2;
+	font-size: 	$header2-clamp;
+}
+h3,
+.h3Text {	
+	font-size:	$header3;
+	font-size: 	$header3-clamp;
+}
+h4,
+.h4Text {	
+	font-size:	$header4;
+	font-size: 	$header4-clamp;
+}
+h5,
+.h5Text {	
+	font-size:	$header5;
+	font-size: 	$header5-clamp;
+}
+
+.pText			{ font-size: 	$paragraph;	}
+.smallText	    { font-size: 	$smallText;	}	
+.tinyText		{ font-size: 	$tinyText;	}
+.jumbo1			{ font-size: 	$jumbo1;	}
+.jumbo2			{ font-size: 	$jumbo2;	}
+.jumbo3			{ font-size: 	$jumbo3;	}
+.jumbo4			{ font-size: 	$jumbo4;	}
+.jumbo5			{ font-size: 	$jumbo5;	}
+.jumbo6			{ font-size: 	$jumbo6;	}

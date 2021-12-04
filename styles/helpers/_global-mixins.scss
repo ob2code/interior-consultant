@@ -9,18 +9,22 @@
     }
 }
 
-@mixin flex {
+@mixin flex($justify-content:flex-start, $align-items: center) {
     display: -ms-flex;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
 
-@mixin flex-col {
+@mixin flex-col($justify-content:flex-start, $align-items: stretch) {
     display: -ms-flex;
     display: flex;
     flex-direction: column;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
+
 
 // Transition Mixin
 @mixin transition($properties...) {
@@ -32,44 +36,39 @@
 }
 
   
-  @mixin font-heading {
-    font-family: $font-heading;
-    font-weight: $weight-bold;
-  }
+//   @mixin font-heading {
+//     font-family: $font-heading;
+//     font-weight: $weight-bold;
+//   }
   
-  @mixin font-met {
-    font-family: $font-main;
-    font-weight: $weight-normal;
-  }
+//   @mixin font-met {
+//     font-family: $font-main;
+//     font-weight: $weight-normal;
+//   }
   
-  @mixin focus-outline {
-    outline: 4px solid $accent-200;
-    outline-offset: 3px;
-  }
+//   @mixin focus-outline {
+//     outline: 4px solid $accent-200;
+//     outline-offset: 3px;
+//   }
   
-  @mixin page-padding {
-      padding-left: 1.125rem;
-      padding-right: 1.125rem;
+//   @mixin page-padding {
+//       padding-left: 1.125rem;
+//       padding-right: 1.125rem;
   
-      @include media-up(small) {
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-      }
+//       @include media-up(small) {
+//           padding-left: 1.5rem;
+//           padding-right: 1.5rem;
+//       }
   
-      @include media-up(large) {
-          padding-left: 2.5rem;
-          padding-right: 2.5rem;
-      }
-  }
+//       @include media-up(large) {
+//           padding-left: 2.5rem;
+//           padding-right: 2.5rem;
+//       }
+//   }
   
-  @mixin sticky-top {
-      position: sticky;
-      top: 0;
-      left: 0;
-      z-index: 10;
-  }
- 
-  
-  @mixin limit-width { 
-      max-width: 44rem;
-  }
+//   @mixin sticky-top {
+//       position: sticky;
+//       top: 0;
+//       left: 0;
+//       z-index: 10;
+//   }

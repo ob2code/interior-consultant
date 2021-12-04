@@ -1,0 +1,20 @@
+// Components for devChallenges.io
+
+$devCha-text-color: #a9a9a9;
+
+
+.attribution__devCha {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    a {
+    text-decoration: none;
+    color: $devCha-text-color;
+    font-weight: bold;
+    }
+}
